@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="635.0" xmlns="http://javafx.com/javafx/8.0.999-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Pane prefHeight="430.0" prefWidth="635.0">
+            <children>
+                <ImageView fitHeight="563.0" fitWidth="761.0" layoutX="-91.0" layoutY="-65.0" opacity="0.87" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/cangreburger.jpg" />
+                    </image>
+                </ImageView>
+                <Label layoutX="26.0" layoutY="23.0" text="Nro de factura:">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font></Label>
+                <Label layoutX="55.0" layoutY="59.0" prefHeight="19.0" prefWidth="66.0" text="Tipo prod:">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font></Label>
+                <Label layoutX="62.0" layoutY="97.0" prefHeight="19.0" prefWidth="66.0" text="Importe:">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font></Label>
+                <Label layoutX="372.0" layoutY="23.0" text="Producto:" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font></Label>
+                <Label layoutX="372.0" layoutY="60.0" text="Cantidad:" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font></Label>
+                <TextField fx:id="factura" layoutX="130.0" layoutY="19.0" />
+                <TextField fx:id="importe" layoutX="130.0" layoutY="94.0" />
+                <TextField fx:id="producto" layoutX="437.0" layoutY="19.0" />
+                <TextField fx:id="cantidad" layoutX="437.0" layoutY="56.0" />
+                <Button fx:id="agregar" layoutX="26.0" layoutY="140.0" mnemonicParsing="false" onMouseClicked="#agregar" prefHeight="25.0" prefWidth="560.0" text="Agregar" />
+                <TableView fx:id="tabla" layoutX="26.0" layoutY="178.0" prefHeight="135.0" prefWidth="560.0" />
+                <Button fx:id="calcular" layoutX="24.0" layoutY="338.0" mnemonicParsing="false" onMouseClicked="#calcular" prefHeight="82.0" prefWidth="115.0" text="Calcular total" />
+                <Label layoutX="189.0" layoutY="338.0" text="Importe" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font></Label>
+                <Label layoutX="176.0" layoutY="371.0" text="Descuento" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font></Label>
+                <Label layoutX="204.0" layoutY="403.0" text="Total" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font></Label>
+                <Label layoutX="394.0" layoutY="338.0" text="Pago" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font></Label>
+                <TextField fx:id="importetotal" layoutX="252.0" layoutY="334.0" prefHeight="25.0" prefWidth="109.0" />
+                <TextField fx:id="descuento" layoutX="252.0" layoutY="367.0" prefHeight="25.0" prefWidth="109.0" />
+                <TextField fx:id="total" layoutX="252.0" layoutY="399.0" prefHeight="25.0" prefWidth="109.0" />
+                <TextField fx:id="pago" layoutX="430.0" layoutY="334.0" prefHeight="25.0" prefWidth="109.0" />
+                <Button fx:id="cobrar" layoutX="485.0" layoutY="367.0" mnemonicParsing="false" onMouseClicked="#cobrar" text="Cobrar" />
+                <Label layoutX="381.0" layoutY="403.0" prefHeight="19.0" prefWidth="49.0" text="Vuelto" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font></Label>
+                <TextField fx:id="vuelto" layoutX="430.0" layoutY="399.0" prefWidth="109.0" />
+                <ComboBox fx:id="tipoprod" layoutX="129.0" layoutY="56.0" prefWidth="150.0" />
+            </children>
+        </Pane>
+    </children>
+</HBox>
